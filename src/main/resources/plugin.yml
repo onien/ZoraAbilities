@@ -1,0 +1,8 @@
+name: ZoraAbilities
+author: PlayStxtion, LegitSkrub
+version: 1.3
+main: lol.onien.zoraabilities.Main
+commands:
+  abilityitems:
+    description: General ZoraAbilities command.
+    aliases: [abitems, aitems, zoraability, zoraitems, zi, ability]

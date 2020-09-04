@@ -1,0 +1,177 @@
+#If you do not have your license key, contact me on Discord or MCM.
+#Discord: @onien#0001
+#Mc-Market: https://www.mc-market.org/members/55723/
+license-key: "HWID-KEY-HERE"
+ 
+#Ability command messages
+help:
+  main:
+    - "&8&m-------------------------------"
+    - "&a&l* &2&lZoraAbilities &a&l*"
+    - ""
+    - "&2/ability &7- &aGeneral Help command."
+    - "&2/ability give <ability> <player> &7- &aGive a player an ability."
+    - "&2/ability items &7- &aList of all abilities."
+    - "&8&m-------------------------------"
+  items:
+    - "&8&m-------------------------------"
+    - "&2&lItems:"
+    - "   - &f&lSwitcheroo"
+    - "   - &2&lRottenEgg"
+    - "   - &c&lRocket"
+    - "   - &7&lStickyWeb"
+    - "   - &d&lCooldownBow"
+    - "   - &6&lPumpkin&c&lReaper"
+    - "   - &d&lGrapplingHook"
+    - "   - &e&lKitePotion"
+    - "   - &c&lBedBomb"
+    - "   - &b&lStormBreaker"
+    - "&8&m-------------------------------"
+ 
+#Invalid Player
+invalid: '&cCould not find that player!'
+ 
+#Radius from X:0 and Z:0
+radius: 50
+ 
+#Within radius message
+within-radius: '&cYou cannot use this ability at spawn!'
+ 
+#Cooldown
+cooldown: '&cYou cannot use that ability for another [time] seconds!'
+ 
+#Puts unbreaking 10 on each item, just for the enchantment glit.
+unbreaking-enchant: false
+ 
+#Switcheroo
+switcheroo:
+  name: '&6Switcheroo'
+  lore:
+    - '&7Throw this at a player to switch locations with them'
+  cooldown: 10 #Seconds
+  switch: '&aYou have switched locations with &2%player%&a!'
+  radius: 10 #Blocks
+  message: '&aYou are not in a radius of &2&l%snowradius% &ablocks, your &6Switcheroo&a has been refunded.'
+  did-not-hit: "&cYour &6Switcheroo &cdidn't hit a player! It has been refunded."
+  received: "&aYou have received a &6Switcheroo&a."
+   
+#Rotten Egg
+rotten-egg:
+  name: '&2Rotten Egg'
+  lore:
+    - '&7Throw this at a player to give them nasty effects!'
+  poison: 1
+  slowness: 1
+  time: 5 #Seconds
+  hit: '&2%player%&a has attacked you with a &2Rotten Egg&a!'
+  attack: '&aYou have attacked &2%player%&a with a &2Rotten Egg&a!'
+  cooldown: 10 #Seconds
+  radius: 10 #Blocks
+  message: '&aYou are not in a radius of &2&l%eggradius% &ablocks, your &2Rotten Egg&a has been returned.'
+  did-not-hit: "&cYour &2Rotten Egg &cdidn't hit a player! It has been refunded."
+  received: "&aYou have received a &2Egg"
+ 
+#Web
+sticky-web:
+  name: '&f&lSticky Web'
+  lore:
+    - '&7Holding this item will negate fall damage.'
+  cooldown: 5
+  message: '&aSince you used a &f&lSticky Web&a your fall damage was negated!'
+  added-cooldown: "&aYou have used a Sticky Web!"
+  received: "&aYou have received a &f&lSticky Web"
+ 
+#StormBreaker
+stormbreaker:
+  name: '&b&lStorm Breaker'
+  lore:
+    - '&cWhip'
+  cooldown: 7
+  message: '&aInitiated the &2Storm Sequence&a!'
+  added-cooldown: "&aYou have used a &2Storm Sequence&a!"
+  damage: 5.5
+  received: "&aYou have received &b&lStorm Breaker&a!"
+ 
+#BedBomb
+bedbomb:
+  name: '&c&lBed Bomb'
+  lore:
+    - "&7Place this to create an explosion!"
+  message: "&aYou have initiated a &cBed Bomb&a!"
+  cooldown: 10
+  damage: 4
+  received: "&aYou have received a &c&lBed Bomb&a."
+ 
+#Rocket
+rocket:
+  name: '&4Rocket'
+  lore:
+    - '&7Right-Click to launch!'
+  cooldown: 5
+  message: '&4WOOSH! &cYou have used a Rocket!'
+  added-cooldown: "&dYou have used a Rocket!"
+  launch-distance: 4.0
+  received: "&aYou have received a &4Rocket"
+ 
+#Grappling Hook
+grapplinghook:
+  name: '&6&lGrappling Hook'
+  lore:
+    - '&dWhoosh'
+  cooldown: 7
+  message: '&2Whoosh! &aYou have used a &6grappling hook&a!'
+  added-cooldown: "&aYou have used your &6grappling hook"
+  damage: 2.0
+  distance: 5
+  received: "&aYou have received a &6&lGrappling hook&a!"
+ 
+#Cooldown Bow
+cooldownbow:
+  name: '&e&lCooldown Bow'
+  lore:
+    - '&6Unluggy Oos'
+  cooldown: 7
+  cooldown-command: "say set %player% enderpearl 16"
+  #Set to '' to display no message.
+  message: '&aYou have given &b%player% &aa cooldown!'
+  received: "&aYou have received a &e&lCooldown Bow"
+  infinity-enabled: true
+ 
+#Pumpkin Reaper
+pumpkinreaper:
+  name: '&6&lPumpkin Reaper'
+  lore:
+    - '&cPumpkin!'
+  cooldown: 7
+  #Set to '' to display no message.
+  damager-swapped-message: '&aYou have swapped &2%victim%''s &ahelmet with a &6Pumpkin' # %damager% , %victim%
+  victim-swapped-message: '&aYour helmet has been swapped with a &6Pumpkin &athanks to &2%damager%&a!' # %damager% , %victim%
+  damage-effect-multiplier: 25.0
+  damage-multiplier: 10.0
+  chance: 20 # 1/<your_number> of dealing the effect
+  received: "&aYou have received a &6&lPumpkin Reaper"
+ 
+#KitePotion
+kitepotion:
+  name: '&a&lKite Potion'
+  lore:
+    - "&7Drink this to receive speed 3!"
+  message: "&aYou have consumed a &aKite Potion&a!"
+  duration: 10
+  amplifier: 3
+  cooldown: 10
+  received: "&aYou have received a &a&lKite Potion"
+
+#FreezeGun
+freezegun:
+  name: '&b&lFreeze Gun'
+  lore:
+    - '&bYiew'
+  cooldown: 7
+  received: "&aYou have received a &b&lStorm Breaker"
+  shooter-hit-player: "&eYou have frozen &d%player%&e!"
+  victim-got-hit: "&eYou were hit by &d%player% &ewith a &b&lFrozen Gun!"
+  too-far: "&eYou are too far away from that player!"
+  radius: 15
+  effect-time: 5
+  effect-amplifier: 10
